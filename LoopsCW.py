@@ -2,7 +2,8 @@ def main():
     # problem1()
     # problem2()
     # problem3()
-    problem4()
+    # problem4()
+    FizzBuzz()
 
 # Print -20 to and including 50. Use any loop you want.
 
@@ -37,12 +38,37 @@ def problem3():
 def problem4():
     while True:
         password = input("Enter password ")
-        password2 = input("Reenter password ")
-        if password != password2:
-               print("TRY AGAIN!!!")
-        elif password2 == "q":
-                break
 
+        password2 = input("Reenter password ")
+        if password == "q":
+            break
+        elif password == password2:
+            break
+        elif password != password2:
+          print("TRY AGAIN!!")
+
+
+# Prompt the User for the ending value (e.g. 100)
+# Your code should start at 1
+# and then iterate each number up to the ending value entered by the user
+# If the current number is evenly divisible by 3 you should print FIZZ and the number
+# If the current number is evenly divisible by 5 you should print BUZZ and the number
+# If the current number is evenly divisible by both 3 and 5 you should print FIZZBUZZ
+# and the number to the screen
+# Otherwise, just print the original number
+
+def FizzBuzz():
+
+    endingVal = int(input("Enter ending value "))
+    for endingVal in range(1,endingVal,):
+        print(endingVal)
+    if endingVal%3==0 and endingVal%5==0:
+        print("FIZZ BUZZ " + str(endingVal))
+    elif endingVal%5==0:
+        print("FIZZ " + str(endingVal))
+    elif endingVal%5==0:
+        print("BUZZ " + str(endingVal))
+    # else: print(endingVal)
 
 
 
